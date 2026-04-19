@@ -13,9 +13,11 @@ import java.util.List;
 public class CategoryService {
 
     private final CategoryRepository categoryRepository;
-    public CategoryService(CategoryRepository categoryRepository, CategoryRepository categoryRepository1) {
-        this.categoryRepository = categoryRepository1;
+
+    public CategoryService(CategoryRepository categoryRepository) {
+        this.categoryRepository = categoryRepository;
     }
+
 
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
